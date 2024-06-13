@@ -11,7 +11,7 @@ import array as arr
 
 database_name = "checklist"
 user_name = "postgres"
-password = "hstnfrnctn2"
+password = "hstnfrnctn24"
 host_ip = "localhost"
 host_port = "5434"
 
