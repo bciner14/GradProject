@@ -28,14 +28,6 @@ app.config["SESSION_TYPE"]="sqlalchemy"
 
 
 
-
-
-database_name = "checklist"
-user_name = "postgres"
-password = "hstnfrnctn2"
-host_ip = "localhost"
-host_port = "5434"
-
 baglanti = psycopg2.connect(database=database_name, user=user_name, password=password, host=host_ip, port=host_port)
 
 baglanti.autocommit = True
