@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kullanıcıyı Göster</title>
+</head>
+<body>
+
+
+  <table border = 1>
+    {% for key, value in result.items() %}
+
+    <tr>
+       <th><input style="font-size: 1rem;" type="text" name="id" value="{{}}}" input> <br><br></th>
+       <td> {{ value }} </td>
+    </tr>
+
+    {% endfor %}
+ </table>
+
+</body>
+</html>

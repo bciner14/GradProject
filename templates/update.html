@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kullanıcı Güncelle</title>
+</head>
+<body>
+<section style="background-color:coral;height :100vh;">
+  <div class="container" style="height: 100%;">
+    <div class="d flex justify-content-center align-items-center" style="height: 100%;">
+      <div>
+ {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul>
+    {% for category, message in messages %}
+  <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+  {% endwith %}
+
+
+      <form action="" method="post">
+          <h1>Güncellenecek kişinin numarası</h1>
+        <label style="font-size: 1rem;" for="id">Id</label> <br>
+        <input style="font-size: 1rem;" type="text" name="id" input> <br>
+        <label for="name">Ad</label> <br>
+        <input type="text" name="name"> <br>
+          <h2>Güncellenecek kişinin yeni özellikleri</h2>
+          <label style="box-shadow: aqua"for="newid">Yeniid</label><br>
+          <input style="box-shadow: aliceblue" type="text"name="newid"input>
+           <br>
+           <label style="box-shadow: aqua"for="newname">YeniAd</label><br>
+          <input style="box-shadow: aliceblue" type="text"name="newname"input>
+           <br>
+           <label style="box-shadow: aqua"for="newsurname">YeniSoyad</label><br>
+          <input style="box-shadow: aliceblue" type="text"name="newsurname"input>
+           <br>
+           <label style="box-shadow: aqua"for="newpassword">YeniŞifre</label><br>
+          <input style="box-shadow: aliceblue" type="password"name="newpassword"input>
+           <br>
+           <label style="box-shadow: aqua"for="newrol">Yenirol</label><br>
+          <input style="box-shadow: aliceblue" type="number"name="newrol"input>
+           <br><br>
+        <button type="submit">Güncelle</button>
+      </form>
+        </div>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>

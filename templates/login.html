@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş Sayfası</title>
+</head>
+
+<body>
+  <section style="background-color:coral;height :100vh;">
+  <div class="container" style="height: 100%;">
+    <div align="center" style="height: 100%;">
+      <div  style="margin-bottom:auto  " >
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul>
+    {% for category, message in messages %}
+  <li class="{{ category }}">{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+  {% endwith %}
+
+                     <br>
+      <h1>Başkent Üniversitesi Hemşirelik Bölümü</h1><br>
+      <h2>Öğrenci Beceri Karnesi Sistemi</h2><br>
+
+      <form action="" method="post">
+        <input  style="margin-left: 14px;font-size: 1em" type="submit" value="studentlogin" name="studentlogin"><br><br><br>
+ <input  style="margin-left: 14px;font-size: 1em" type="submit" value="profnurselogin" name="profnurselogin"><br><br><br>
+ <input  style="margin-left: 14px;font-size: 1em" type="submit" value="adminlogin" name="adminlogin"><br>
+
+        <br><br>
+      </form>
+        </div>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>
